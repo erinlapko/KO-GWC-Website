@@ -9,9 +9,11 @@
     margin-top: 8px;
     margin-left: 20px;
     font-size: 20px;	
+}
 
 .entry {
 	margin: 8px;	
+}
 
 </style>
 
