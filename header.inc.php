@@ -36,7 +36,7 @@
 	background: url("title background.jpg");
 	background-repeat: x-repeat;
 	text-align: center;
-	font-family: "Times New Roman", Helvetica, sans-serif;	
+	font-family: "Aller Display", Helvetica, sans-serif;	 
 	font-size: 100px;
 	-webkit-text-fill-color: transparent;
     -webkit-background-clip: text;

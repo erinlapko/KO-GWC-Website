@@ -5,7 +5,6 @@ session_start();
 <!DOCTYPE html PUBLIC"-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
 <html xmlns="http://www.w3.org/1999/xhtml">
-
 <head>
 <title>Klein Oak Girls Who Code</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">		<!--dimensioning-->
@@ -15,66 +14,67 @@ session_start();
 <style>
 /* . is class selector; it styles all elements in the class
 	# is an id selector
+	
+	color codes:
+	#62baa9 teal
+	#0d4369 navy
+	#105889 light navy
+	#dcdee8 grey
+	#f5f5f5 white
+	#606166 dark grey
+	
 */
-
+@font-face{
+	font-family: "Aller Display";	
+	src: url("fonts/AllerDisplay.ttf");
+}
 body {
 	background-image: url("website background2.jpg") ;
-	background-repeat: 	no-repeat ;
-	 background-position: center top; 
+	background-repeat: 	repeat-y ;
+	background-position: center top; 
 }
-
-.header{
-	text-align: center;
-	font-family: "Trebuchet MS", Helvetica, sans-serif;
-	background-color: #aaa9d1;
-	color: #4e6182;
-	font-size: 25px;
-	width: 60%;
-	display: block;
-    margin-left: auto;
-    margin-right: auto;
-	padding: 1.5% 3.2%;		/* creates header block*/
-}
-
 .content{
 	font-size: 20px;
-	font-family: "Trebuchet MS", Helvetica, sans-serif;
-	padding: 14px;
-	width: 64.6%;
+	font-family: "Arial", Helvetica, sans-serif;
+	padding: 15px;
 	display: block;
     margin-left: auto;
     margin-right: auto;
-	color: #4e6182; 
-	background-color: #dcdee8;
+	color: #0d4369; 
+	background-color: #f5f5f5;
 }
 
 .sticky{
-
 	position: fixed;
 	top: 0;
-    left: 50%;
-	transform: translate(-50%, -0%);
-	
+  
 }
 
 #footer {
+	padding: 15px;
     clear: both;
     text-align: center;
-	padding: 7px;
-	
+	background-color: #105889; 
+	display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .button{
 	position:relative;
 	left: 20px;
 	top: 10px;
-	background-color: #4e6182; 
+	background-color: #105889; 
 	color: white;
     border: none;
 	padding: 8px 15px;
 	font-size: 17px;
 	cursor: pointer;
 	border-radius: 3px;
+}
+.button sub: hover{
+	background-color: #f5f5f5;
+	color: #105889;
 }
 .entry input[type=text], input[type=password] {		
     float: left;
@@ -95,9 +95,13 @@ textarea {
 }
 
 .entry {
-	margin: 8px;	
-
+	margin: 8px;
 }
+
+.space{
+	margin: 200px;
+}
+
 </style>
 </head>
 
@@ -107,7 +111,7 @@ textarea {
 	<?php include("header.inc.php"); ?>
 	</div>
 	<br> </br>
-	<div id="content">
+	<div class="content">
 
 	<?php								/*allows users to load pages*/
 	if (!isset($_REQUEST['content']))
@@ -120,6 +124,9 @@ textarea {
 	?> 
 	
 	</div>
+	
+<div class = "space">
+</div>
 
 <div id="footer">
 <?php include("footer.inc.php"); ?>
@@ -138,9 +145,7 @@ textarea {
 		else{
 			$('#topnav').removeClass("sticky");
 		}
-
 	})
-
 </script>
 
 
